@@ -1,3 +1,4 @@
+
 (function($) {
     $.fn.redraw = function() {
       return this.map(function(){ this.offsetTop; return this; });
@@ -308,7 +309,17 @@
           onCallback && onCallback({error: 'Server error'});
         }
       });
-    }
+    },
+    openModal: function(img) {
+      var modal = document.getElementById("myModal");
+      var modalImg = document.getElementById("img01");
+      modal.style.display = "block";
+      modalImg.src = img.src;
+      },
+      closeModal: function() {
+      var modal = document.getElementById("myModal");
+      modal.style.display = "none";
+      }
   };
   
   /*!
